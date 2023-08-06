@@ -3,5 +3,6 @@ import CreatureList from "@/components/CreatureList.vue";
 import CreatureItem from "@/components/reatureItem.vue";
 
 describe("CourseList.vue", () => {
-  it("emits show details event when Add Course button is clicked in CourseItem.vue", async () => {});
+  it("emits sendAShowDetail event when detail button is clicked in CreatureItem.vue", async () => {});
+  it("emits sendAHideDetail event when back-to-card button is clicked in CreatureItem.vue", async () => {});
 });
