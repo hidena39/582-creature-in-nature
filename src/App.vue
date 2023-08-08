@@ -7,13 +7,17 @@
 
 <script>
 // import HelloWorld from "./components/HelloWorld.vue";
-import CreatureList from "./CreatureList/HelloWorld.vue";
+import CreatureList from "./CreatureList.vue";
+import CreatureInput from "./CreatureInput.vue";
 
 export default {
   name: "App",
   components: {
     // HelloWorld,
     CreatureList,
+    CreatureInput,
   },
 };
 </script>
+
+

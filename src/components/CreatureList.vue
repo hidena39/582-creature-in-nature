@@ -4,7 +4,6 @@
 
 <script>
 import CreatureItem from "./CreatureItem.vue";
-import CreatureDeail from "./CreatureDetail.vue";
 
 export default {
   name: "CreatureList",
@@ -26,3 +25,5 @@ export default {
   },
 };
 </script>
+
+<!-- https://bobbyhadz.com/blog/get-all-selected-values-of-multiple-select-using-javascript -->
