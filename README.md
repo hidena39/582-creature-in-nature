@@ -8,6 +8,12 @@ My name is Hidena. I am currently taking Web Design Specielist Course.
 
 This app is made to learn the framework Vue.JS. This is an app for kids to build a science project. Kids can upload details of creatures found in nature.
 
+## To do list
+
+- [x] Create Vue app folder
+- [ ]
+- [ ]
+
 ## Project setup
 
 ```
