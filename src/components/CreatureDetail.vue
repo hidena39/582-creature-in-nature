@@ -2,7 +2,7 @@
 
 <script>
 export default {
-  name: "CreatureItem",
+    name: "CreatureDetail",
 };
 </script>
 <!-- placehold.co -->

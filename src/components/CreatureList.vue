@@ -4,6 +4,7 @@
 
 <script>
 import CreatureItem from "./CreatureItem.vue";
+import CreatureDeail from "./CreatureDetail.vue";
 
 export default {
   name: "CreatureList",
