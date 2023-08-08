@@ -6,7 +6,7 @@
 
 
 export default {
-    name: "CreatureInput",
+    name: "CreatureForm",
  
 };
 </script>

@@ -4,11 +4,13 @@
 
 <script>
 import CreatureItem from "./CreatureItem.vue";
+import CreatureCategories from "./CreatureCategories.vue";
 
 export default {
   name: "CreatureList",
   components: {
     CreatureItem,
+    CreatureCategories,
   },
   data() {
     return {
