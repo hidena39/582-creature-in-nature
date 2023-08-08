@@ -9,19 +9,19 @@ export default {
   name: "CreatureList",
   components: {
     CreatureItem,
-    },
+  },
   data() {
-        return {
-            showDetail: false,
-        };
+    return {
+      showDetail: false,
+    };
+  },
+  methods: {
+    sendAShowDetail() {
+      this.showDetail = true;
     },
-   methods: {
-        sendAShowDetail() {
-            this.showDetail = true;
-        },
-        sendHideDetail() {
-            this.showDetail = false;
-        },
+    sendHideDetail() {
+      this.showDetail = false;
     },
+  },
 };
 </script>
