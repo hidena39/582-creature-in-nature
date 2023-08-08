@@ -10,9 +10,9 @@ This app is made to learn the framework Vue.JS. This is an app for kids to build
 
 ## To do list
 
-- [x] Create Vue app folder
-- [ ]
-- [ ]
+- [x] Create Vue app folder for the app
+- [ ] Create Component files
+- [ ] Create Unit tests
 
 ## Project setup
 
