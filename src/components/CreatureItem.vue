@@ -1,5 +1,5 @@
 <template>
-  <div class="children" :class="{showing}">
+  <div class="children" :class="{ showing }">
     <ul>
       <li><img :src="card.image" :alt="name" /></li>
       <li data-test-id="1">
@@ -37,15 +37,14 @@ export default {
           description:
             "Old World sparrows are a group of small passerine birds forming the family Passeridae. They are also known as true sparrows, a name also used for a particular genus of the family, Passer.[1] They are distinct from both the New World sparrows, in the family Passerellidae, and from a few other birds sharing their name, such as the Java sparrow of the family Estrildidae. ",
           categories: "mammals",
-          // fishes, reptiles, amphibians, birds, and mammals
         };
       },
     },
   },
-  data() { 
+  data() {
     return {
       showing: false,
     };
-  }
+  },
 };
 </script>
