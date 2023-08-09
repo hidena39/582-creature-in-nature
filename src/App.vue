@@ -4,6 +4,7 @@
   <h1>Creature in Nature</h1>
   <CourseList />
 </template>
+<h1>animals vertebrates</h1>
 
 <script>
 // import HelloWorld from "./components/HelloWorld.vue";
@@ -19,5 +20,3 @@ export default {
   },
 };
 </script>
-
-

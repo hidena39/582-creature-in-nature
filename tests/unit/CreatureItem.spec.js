@@ -2,10 +2,17 @@ import { shallowMount } from "@vue/test-utils";
 import CreatureItem from "@/components/CreatureItem.vue";
 
 describe("CourseItem.vue", () => {
-  it("renders the props", () => {});
-  it("hides detail card (with back-to-card button) if it is not selected", () => {});
-  it("shows the detail button", () => {});
-  it("toggle showDetail data when the button is clicked", () => {});
-  it("shows a detail card (with back-to-card button) if it is selected", () => {});
-  it("shows the back-to-card button when the detail card is selected", () => {});
+  it("renders the props", () => {
+    const card = {
+      date: "2023-08-01",
+      location: "Vanier Colledge",
+      image: "https://placehold.co/400x400/orange/white",
+      name: "Old World sparrows",
+      categories: "mammals",
+    };
+    const wrapper = shallowMount(CreatureItem, {
+      props: { card },
+    });
+    expect(wrapper.find("[data-test-id='1']").text()).toBe("2023-08-01");
+  });
 });

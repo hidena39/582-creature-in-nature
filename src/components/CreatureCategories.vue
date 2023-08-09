@@ -6,21 +6,20 @@
 // 3.toggle true and false when clicked
 // 4.emits
 // 5.if cards[true] then show cards in CreatureList
-@click="" 
+// @click=""
 
 export default {
-    name: "CreatureCategories",
-    data() { 
-        return {
-            showing: false,
-        };
+  name: "CreatureCategories",
+  data() {
+    return {
+      showing: false,
+    };
+  },
+  methods: {
+    sendShow() {
+      this.showing = true;
+      this.$emit("showCards", this.showing);
     },
-    methods: {
-        sendShow() { 
-            this.showing = true;
-            this.$emit("showCards", this.showing);
-        },
-    },
-
+  },
 };
 </script>

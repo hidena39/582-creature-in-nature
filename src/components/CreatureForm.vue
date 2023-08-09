@@ -1,12 +1,7 @@
-<template>
-    
-</template>
+<template></template>
 
 <script>
-
-
 export default {
-    name: "CreatureForm",
- 
+  name: "CreatureForm",
 };
 </script>
