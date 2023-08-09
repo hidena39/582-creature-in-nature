@@ -18,7 +18,7 @@ export default {
     methods: {
         sendShow() { 
             this.showing = true;
-
+            this.$emit("showCards", this.showing);
         },
     },
 
