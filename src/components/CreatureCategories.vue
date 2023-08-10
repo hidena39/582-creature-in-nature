@@ -1,6 +1,5 @@
-<!-- <template>
-   
-   <Input data-test-id="2" type="checkbox" v-model="chosen" value="mammals"
+<template>
+  <Input data-test-id="2" type="checkbox" v-model="chosen" value="mammals"
     >mammals</Input
   >
   <Input type="checkbox" v-model="chosen" value="birds">birds</Input>
@@ -18,8 +17,5 @@ export default {
       chosen: [],
     };
   },
-}
-
-  
-
-</script> -->
+};
+</script>

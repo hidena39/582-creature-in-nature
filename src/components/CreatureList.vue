@@ -1,5 +1,5 @@
 <template>
-  <!-- <CreatureCategories /> -->
+  <CreatureCategories />
   <div class="parent">
     <CreatureItem
       v-for="card in cards"
@@ -11,7 +11,7 @@
 
 <script>
 import CreatureItem from "./CreatureItem.vue";
-// import CreatureCategories from "./CreatureCategories.vue";
+import CreatureCategories from "./CreatureCategories.vue";
 
 export default {
   name: "CreatureList",
@@ -25,7 +25,7 @@ export default {
   },
   components: {
     CreatureItem,
-    // CreatureCategories,
+    CreatureCategories,
   },
   // data() {
   //   return {
