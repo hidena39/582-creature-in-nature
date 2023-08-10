@@ -2,36 +2,33 @@
   <label for="mammals"> mammals</label>
   <Input
     data-test-id="2"
-    type="checkbox"
-    v-model="chosen"
+    type="radio"
     id="mammals"
     value="mammals"
+    name="pickCategory"
     >mammals</Input
   >
   <label for="birds"> birds</label>
-  <Input type="checkbox" v-model="chosen" id="birds" value="birds">birds</Input>
+  <Input type="radio" id="birds" value="birds" name="pickCategory">birds</Input>
   <label for="amphibians"> amphibians</label>
-  <Input type="checkbox" v-model="chosen" id="amphibians" value="amphibians"
+  <Input type="radio" id="amphibians" value="amphibians" name="pickCategory"
     >amphibians</Input
   >
   <label for="reptiles"> reptiles</label>
-  <Input type="checkbox" v-model="chosen" id="reptiles" value="reptiles"
+  <Input type="radio" id="reptiles" value="reptiles" name="pickCategory"
     >reptiles</Input
   >
   <label for="fishes"> fishes</label>
-  <Input type="checkbox" v-model="chosen" id="fishes" value="fishes"
+  <Input type="radio" id="fishes" value="fishes" name="pickCategory"
     >fishes</Input
   >
-  <p>{{ chosen }}</p>
 </template>
 
 <script>
 export default {
   name: "CreatureCategories",
   data() {
-    return {
-      chosen: [],
-    };
+    return {};
   },
 };
 </script>
