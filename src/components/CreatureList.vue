@@ -1,9 +1,9 @@
 <template>
-  <CreatureCategories />
+  <!-- <CreatureCategories /> -->
   <div class="parent">
     <CreatureItem
       v-for="card in cards"
-      :card="cards"
+      :card="card"
       :key="card.id"
     ></CreatureItem>
   </div>
@@ -11,7 +11,7 @@
 
 <script>
 import CreatureItem from "./CreatureItem.vue";
-import CreatureCategories from "./CreatureCategories.vue";
+// import CreatureCategories from "./CreatureCategories.vue";
 
 export default {
   name: "CreatureList",
@@ -25,21 +25,21 @@ export default {
   },
   components: {
     CreatureItem,
-    CreatureCategories,
+    // CreatureCategories,
   },
-  data() {
-    return {
-      showDetail: false,
-    };
-  },
-  methods: {
-    sendAShowDetail() {
-      this.showDetail = true;
-    },
-    sendHideDetail() {
-      this.showDetail = false;
-    },
-  },
+  // data() {
+  //   return {
+  //     showDetail: false,
+  //   };
+  // },
+  // methods: {
+  //   sendAShowDetail() {
+  //     this.showDetail = true;
+  //   },
+  //   sendHideDetail() {
+  //     this.showDetail = false;
+  //   },
+  // },
 };
 </script>
 

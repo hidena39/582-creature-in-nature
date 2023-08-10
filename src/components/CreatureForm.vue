@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <form>
       @submit.prevent=functionName
@@ -29,4 +29,4 @@ export default {
     return {};
   },
 };
-</script>
+</script> -->
