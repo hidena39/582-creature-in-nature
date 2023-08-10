@@ -5,8 +5,8 @@ describe("CreatureCategories.vue", () => {
   it("If the category checkbox are there", async () => {
     const wrapper = shallowMount(CreatureCategories);
     const checkboxText = "mammals";
-    await wrapper.find("[data-test-id='2']").trigger("click");
-    console.log(wrapper.chosen);
+    // await wrapper.find("[data-test-id='2']").trigger("click");
+    // console.log(wrapper.this.chosen);
     expect(wrapper.find("[data-test-id='2']").text()).toBe(checkboxText);
   });
   //   it("If the categorie buttons trigger select event (changing false -> true)", async () => {});
