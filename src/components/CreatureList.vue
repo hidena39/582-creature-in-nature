@@ -2,11 +2,17 @@
   <CreatureCategories @chosenCategories="receiveCategories" />
   <div class="parent">
     <p>current category: {{ currentCategory }}</p>
-    <CreatureItem
-      v-for="card in filteredCards"
-      :card="card"
-      :key="card.id"
-    ></CreatureItem>
+    <div v-if="filteredCards != ''" class="container">
+      <CreatureItem
+        v-for="card in filteredCards"
+        :card="card"
+        :key="card.id"
+      ></CreatureItem>
+    </div>
+
+    <div v-else class="container">
+      <p>No cards to show you</p>
+    </div>
   </div>
 </template>
 

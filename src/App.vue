@@ -1,6 +1,7 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+  <CreatureForm />
   <h1>Creature in Nature</h1>
   <h2>Animals/Vertebrates</h2>
   <!-- <CreatureForm></CreatureForm> -->
@@ -10,7 +11,7 @@
 <script>
 // import HelloWorld from "./components/HelloWorld.vue";
 import CreatureList from "./components/CreatureList.vue";
-// import CreatureForm from "./CreatureForm.vue";
+import CreatureForm from "./components/CreatureForm.vue";
 
 export default {
   name: "App",
@@ -63,7 +64,7 @@ export default {
   components: {
     // HelloWorld,
     CreatureList,
-    // CreatureForm,
+    CreatureForm,
   },
 };
 </script>
