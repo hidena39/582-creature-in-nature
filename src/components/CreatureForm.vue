@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form>
+    <form @submit.prevent="sendAllInput">
       <!-- @submit.prevent=functionName -->
       <label for="date">Date</label>
       <input type="date" id="date" v-model="inputDate" required />
@@ -45,6 +45,20 @@ export default {
       inputCategories: "",
       inputDescription: "",
     };
+  },
+  methods: {
+    sendAllInput() {
+      this.$emit("inputData", this.inputDate);
+      console.log("send:", this.inputDate);
+      this.$emit("inputLocation", this.inputLocation);
+      console.log("send:", this.inputLocation);
+      this.$emit("inputName", this.inputName);
+      console.log("send:", this.inputName);
+      this.$emit("inputCategories", this.inputCategories);
+      console.log("send:", this.inputCategories);
+      this.$emit("inputDescription", this.inputDescription);
+      console.log("send:", this.inputDescription);
+    },
   },
 };
 </script>
