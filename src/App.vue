@@ -1,7 +1,7 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-  <CreatureForm />
+  <CreatureForm @ArrayOfInput="PushArray" />
   <h1>Creature in Nature</h1>
   <h2>Animals/Vertebrates</h2>
   <!-- <CreatureForm></CreatureForm> -->
@@ -19,7 +19,7 @@ export default {
     return {
       cards: [
         {
-          id: "2",
+          id: 2,
           date: "2023-08-01",
           location: "Vanier Colledge",
           image: "https://placehold.co/400x400/orange/white",
@@ -29,7 +29,7 @@ export default {
           categories: "mammals",
         },
         {
-          id: "3",
+          id: 3,
           date: "2023-08-01",
           location: "Vanier Colledge",
           image: "https://placehold.co/400x400/green/white",
@@ -39,7 +39,7 @@ export default {
           categories: "birds",
         },
         {
-          id: "4",
+          id: 4,
           date: "2023-08-01",
           location: "Vanier Colledge",
           image: "https://placehold.co/400x400/blue/white",
@@ -49,7 +49,7 @@ export default {
           categories: "fishes",
         },
         {
-          id: "5",
+          id: 5,
           date: "2023-08-01",
           location: "Vanier Colledge",
           image: "https://placehold.co/400x400/red/white",
@@ -65,6 +65,12 @@ export default {
     // HelloWorld,
     CreatureList,
     CreatureForm,
+  },
+  methods: {
+    PushArray(obj) {
+      this.cards.push(obj);
+      console.log("push:", this.cards);
+    },
   },
 };
 </script>
