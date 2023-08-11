@@ -49,13 +49,12 @@ export default {
     };
   },
   methods: {
-    
     sendAllInput() {
       // image and id
       this.obj["date"] = this.inputDate;
       this.obj["location"] = this.inputLocation;
       this.obj["name"] = this.inputName;
-      this.obj["description"] = this.inputCategories;
+      this.obj["categories"] = this.inputCategories;
       this.obj["description"] = this.inputDescription;
       this.AllInput.push(this.obj);
       console.log("send:", this.AllInput);
