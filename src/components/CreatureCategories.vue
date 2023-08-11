@@ -70,7 +70,7 @@ export default {
   methods: {
     sendChosen() {
       this.$emit("chosenCategories", this.chosen);
-      console.log("Chosen category:", this.chosen);
+      console.log("send:", this.chosen);
     },
   },
 };
