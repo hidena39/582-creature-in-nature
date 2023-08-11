@@ -1,6 +1,7 @@
 <template>
   <CreatureCategories @chosenCategories="receiveCategories" />
   <div class="parent">
+    <p>current category: {{ currentCategory }}</p>
     <CreatureItem
       v-for="card in filteredCards"
       :card="card"
@@ -30,20 +31,24 @@ export default {
   data() {
     return {
       chosen: "all",
+      currentCategory: "all",
     };
   },
   methods: {
     receiveCategories(chosen) {
       console.log("received:", chosen);
+      this.currentCategory = chosen;
       console.log("Filtered Cards:", this.filteredCards);
     },
   },
   computed: {
     filteredCards() {
-      if (this.chosen === "all") {
+      if (this.currentCategory === "all") {
         return this.cards;
       } else {
-        return this.cards.filter((card) => card.categories === this.chosen);
+        return this.cards.filter(
+          (card) => card.categories === this.currentCategory
+        );
       }
     },
   },
