@@ -1,6 +1,13 @@
 <template>
   <CreatureCategories @chosenCategories="receiveCategories" />
-  <div class="parent">
+  <div class="parent" v-if="chosen === 'all'">
+    <CreatureItem
+      v-for="card in cards"
+      :card="card"
+      :key="card.id"
+    ></CreatureItem>
+  </div>
+  <div class="parent" v-else-if="chosen === 'mammals'">
     <CreatureItem
       v-for="card in cards"
       :card="card"
@@ -39,5 +46,3 @@ export default {
   },
 };
 </script>
-
-
