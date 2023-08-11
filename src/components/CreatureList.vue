@@ -34,7 +34,8 @@ export default {
   },
   methods: {
     receiveCategories(chosen) {
-      console.log(chosen);
+      console.log("received:", chosen);
+      console.log("received, this:", this.chosen);
       console.log("Filtered Cards:", this.filteredCards);
     },
   },
