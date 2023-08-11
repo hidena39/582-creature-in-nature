@@ -1,15 +1,8 @@
 <template>
   <CreatureCategories @chosenCategories="receiveCategories" />
-  <div class="parent" v-if="chosen === 'all'">
+  <div class="parent">
     <CreatureItem
-      v-for="card in cards"
-      :card="card"
-      :key="card.id"
-    ></CreatureItem>
-  </div>
-  <div class="parent" v-else-if="chosen === 'mammals'">
-    <CreatureItem
-      v-for="card in cards"
+      v-for="card in filteredCards"
       :card="card"
       :key="card.id"
     ></CreatureItem>
@@ -42,6 +35,16 @@ export default {
   methods: {
     receiveCategories(chosen) {
       console.log(chosen);
+      console.log("Filtered Cards:", this.filteredCards);
+    },
+  },
+  computed: {
+    filteredCards() {
+      if (this.chosen === "all") {
+        return this.cards;
+      } else {
+        return this.cards.filter((card) => card.categories === this.chosen);
+      }
     },
   },
 };
