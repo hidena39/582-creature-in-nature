@@ -1,4 +1,14 @@
 <template>
+  <label for="all"> all</label>
+  <input
+    data-test-id="2"
+    type="radio"
+    id="all"
+    value="all"
+    name="pickCategory"
+    v-model="chosen"
+    @change="sendChosen"
+  />
   <label for="mammals"> mammals</label>
   <input
     data-test-id="2"
@@ -7,6 +17,7 @@
     value="mammals"
     name="pickCategory"
     v-model="chosen"
+    @change="sendChosen"
   />
   <label for="birds"> birds</label>
   <input
@@ -15,6 +26,7 @@
     value="birds"
     name="pickCategory"
     v-model="chosen"
+    @change="sendChosen"
   />
   <label for="amphibians"> amphibians</label>
   <input
@@ -23,6 +35,7 @@
     value="amphibians"
     name="pickCategory"
     v-model="chosen"
+    @change="sendChosen"
   />
   <label for="reptiles"> reptiles</label>
   <input
@@ -31,6 +44,7 @@
     value="reptiles"
     name="pickCategory"
     v-model="chosen"
+    @change="sendChosen"
   />
   <label for="fishes"> fishes</label>
   <input
@@ -39,6 +53,7 @@
     value="fishes"
     name="pickCategory"
     v-model="chosen"
+    @change="sendChosen"
   />
 
   <p>You picked: {{ chosen }}</p>
@@ -49,13 +64,13 @@ export default {
   name: "CreatureCategories",
   data() {
     return {
-      chosen: "",
+      chosen: "all",
     };
   },
   methods: {
-    // sendChosen() {
-    //   this.$emit("chosenCategories", this.chosen);
-    // },
+    sendChosen() {
+      this.$emit("chosenCategories", this.chosen);
+    },
   },
 };
 </script>

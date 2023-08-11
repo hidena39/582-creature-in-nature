@@ -1,5 +1,5 @@
 <template>
-  <CreatureCategories />
+  <CreatureCategories @chosenCategories="receiveCategories" />
   <div class="parent">
     <CreatureItem
       v-for="card in cards"
@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import CreatureItem from "./CreatureItem.vue";
 import CreatureCategories from "./CreatureCategories.vue";
+import CreatureItem from "./CreatureItem.vue";
 
 export default {
   name: "CreatureList",
@@ -24,23 +24,20 @@ export default {
     },
   },
   components: {
-    CreatureItem,
     CreatureCategories,
+    CreatureItem,
   },
-  // data() {
-  //   return {
-  //     showDetail: false,
-  //   };
-  // },
-  // methods: {
-  //   sendAShowDetail() {
-  //     this.showDetail = true;
-  //   },
-  //   sendHideDetail() {
-  //     this.showDetail = false;
-  //   },
-  // },
+  data() {
+    return {
+      chosen: "all",
+    };
+  },
+  methods: {
+    receiveCategories(chosen) {
+      console.log(chosen);
+    },
+  },
 };
 </script>
 
-<!-- https://bobbyhadz.com/blog/get-all-selected-values-of-multiple-select-using-javascript -->
+

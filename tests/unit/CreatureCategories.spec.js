@@ -7,8 +7,8 @@ describe("CreatureCategories.vue", () => {
     const checkboxText = "mammals";
     expect(wrapper.find("[data-test-id='2']").text()).toBe(checkboxText);
   });
-  //   it("If the categorie buttons trigger select event (changing false -> true)", async () => {});
-  //   it("If the categorie buttons trigger deselect event (changing true -> false)", async () => {});
+  it("If the categorie radio buttons trigger select event", async () => {});
+
   //   it("If the select event (changing false -> true) emits", async () => {});
   //   it("If the deselect event (changing true -> false) emits", async () => {});
   //   it("If buttons get colored if selected", async () => {});
