@@ -3,13 +3,13 @@
     <form>
       <!-- @submit.prevent=functionName -->
       <label for="date">Date</label>
-      <input type="date" id="date" required />
+      <input type="date" id="date" v-model="inputDate" required />
       <label for="location">Location</label>
-      <input type="text" id="location" required />
+      <input type="text" id="location" v-model="inputLocation" required />
       <label for="name">Name</label>
-      <input type="text" id="name" required />
+      <input type="text" id="name" v-model="inputName" required />
       <label for="categories">categories</label>
-      <select id="categories" required>
+      <select id="categories" v-model="inputCategories" required>
         <option value="all">all</option>
         <option value="mammals">mammals</option>
         <option value="birds">birds</option>
@@ -18,9 +18,19 @@
         <option value="fishes">fishes</option>
       </select>
       <label for="description">Description</label>
-      <textarea id="description" cols="30" rows="10"></textarea>
+      <textarea
+        id="description"
+        cols="30"
+        rows="10"
+        v-model="inputDescription"
+      ></textarea>
       <input type="submit" value="Send Request" />
     </form>
+    {{ inputDate }}
+    {{ inputLocation }}
+    {{ inputName }}
+    {{ inputCategories }}
+    {{ inputDescription }}
   </div>
 </template>
 
@@ -28,7 +38,13 @@
 export default {
   name: "CreatureForm",
   data() {
-    return {};
+    return {
+      inputDate: "",
+      inputLocation: "",
+      inputName: "",
+      inputCategories: "",
+      inputDescription: "",
+    };
   },
 };
 </script>
