@@ -40,6 +40,7 @@ export default {
   data() {
     return {
       AllInput: [],
+      obj: {},
       inputDate: "",
       inputLocation: "",
       inputName: "",
@@ -48,24 +49,15 @@ export default {
     };
   },
   methods: {
-    // sendAllInput() {
-    //   this.$emit("inputData", this.inputDate);
-    //   console.log("send:", this.inputDate);
-    //   this.$emit("inputLocation", this.inputLocation);
-    //   console.log("send:", this.inputLocation);
-    //   this.$emit("inputName", this.inputName);
-    //   console.log("send:", this.inputName);
-    //   this.$emit("inputCategories", this.inputCategories);
-    //   console.log("send:", this.inputCategories);
-    //   this.$emit("inputDescription", this.inputDescription);
-    //   console.log("send:", this.inputDescription);
-    // },
+    
     sendAllInput() {
-      this.AllInput.push(this.inputDate);
-      this.AllInput.push(this.inputLocation);
-      this.AllInput.push(this.inputName);
-      this.AllInput.push(this.inputCategories);
-      this.AllInput.push(this.inputDescription);
+      // image and id
+      this.obj["date"] = this.inputDate;
+      this.obj["location"] = this.inputLocation;
+      this.obj["name"] = this.inputName;
+      this.obj["description"] = this.inputCategories;
+      this.obj["description"] = this.inputDescription;
+      this.AllInput.push(this.obj);
       console.log("send:", this.AllInput);
     },
   },
