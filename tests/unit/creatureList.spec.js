@@ -1,12 +1,63 @@
-// import { shallowMount } from "@vue/test-utils";
-// // import CreatureList from "@/components/CreatureList.vue";
-// // import CreatureItem from "@/components/reatureItem.vue";
+import { shallowMount } from "@vue/test-utils";
+import CreatureList from "@/components/CreatureList.vue";
+import CreatureCategories from "@/components/CreatureCategories.vue";
 
-// describe("CourseList.vue", () => {
-//   it("If the cards with selected categories (cards that are true) are rendered", async () => {});
-//   it("Receives emitted show cards event from CreatureCategories.vue", async () => {});
-//   it("Receives emitted remove cards event from CreatureCategories.vue", async () => {});
-//   it("If the deselect event (changing true -> false) emits", async () => {});
-//   it("hides detail card (with back-to-card button) if it is not selected", () => {});
-//   it("shows a detail card (with back-to-card button) if it is selected", () => {});
-// });
+describe("CourseList.vue", () => {
+  it("trigger receiveCategories event when inputs are submitted in CreatureCategories.vue", async () => {
+    const wrapper = shallowMount(CreatureList);
+    await wrapper
+      .findComponent(CreatureCategories)
+      .vm.$emit("chosenCategories", "mammals");
+    expect(wrapper.vm.currentCategory).toBe("mammals");
+  });
+  it("shows correct 'currentCategory' on the page", async () => {
+    const wrapper = shallowMount(CreatureList);
+    await wrapper
+      .findComponent(CreatureCategories)
+      .vm.$emit("chosenCategories", "mammals");
+    expect(wrapper.find("[data-test-id='16']").text()).toBe(
+      "current category: mammals"
+    );
+  });
+  it("shows only selected cards using filteredCards function", async () => {
+    const cards = [
+      {
+        id: 1,
+        categories: "mammals",
+      },
+      {
+        id: 2,
+        categories: "birds",
+      },
+    ];
+    const wrapper = shallowMount(CreatureList, {
+      props: { cards },
+    });
+    await wrapper
+      .findComponent(CreatureCategories)
+      .vm.$emit("chosenCategories", "mammals");
+    console.log(wrapper.vm.filteredCards);
+    expect(wrapper.vm.filteredCards).toStrictEqual([
+      { categories: "mammals", id: 1 },
+    ]);
+  });
+  it("shows 'No cards to show you' message when there are no cards in hte chosen category", async () => {
+    const cards = [
+      {
+        id: 1,
+        categories: "mammals",
+      },
+      {
+        id: 2,
+        categories: "birds",
+      },
+    ];
+    const wrapper = shallowMount(CreatureList, {
+      props: { cards },
+    });
+    await wrapper
+      .findComponent(CreatureCategories)
+      .vm.$emit("chosenCategories", "fishes");
+    expect(wrapper.find("[data-test-id='17']").exists()).toBe(true);
+  });
+});

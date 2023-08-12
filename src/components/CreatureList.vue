@@ -1,7 +1,7 @@
 <template>
   <CreatureCategories @chosenCategories="receiveCategories" />
   <div>
-    <p>current category: {{ currentCategory }}</p>
+    <p data-test-id="16">current category: {{ currentCategory }}</p>
     <div v-if="filteredCards != ''" class="cardContainer list">
       <CreatureItem
         v-for="card in filteredCards"
@@ -11,7 +11,7 @@
     </div>
 
     <div v-else class="cardContainer">
-      <p>No cards to show you</p>
+      <p data-test-id="17">No cards to show you</p>
     </div>
   </div>
 </template>
