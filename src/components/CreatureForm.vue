@@ -7,7 +7,7 @@
       <label for="location">Location</label>
       <input type="text" id="location" v-model="inputLocation" required />
       <label for="location"
-        >Image URL ex.https://placehold.co/400x400/red/white</label
+        >Image URL <button @click="copyText">Copy example URL</button></label
       >
       <input type="text" id="location" v-model="inputImage" required />
       <label for="name">Name</label>
@@ -41,6 +41,7 @@
 <script>
 export default {
   name: "CreatureForm",
+
   data() {
     return {
       obj: {},
@@ -53,21 +54,31 @@ export default {
       inputDescription: "",
     };
   },
+
   methods: {
     sendAllInput() {
-      // image and id
-      this.obj["id"] = this.idNumber;
-      this.obj["date"] = this.inputDate;
-      this.obj["location"] = this.inputLocation;
-      this.obj["image"] = this.inputImage;
-      this.obj["name"] = this.inputName;
-      this.obj["categories"] = this.inputCategories;
-      this.obj["description"] = this.inputDescription;
+      const obj = {
+        id: this.idNumber,
+        date: this.inputDate,
+        location: this.inputLocation,
+        image: this.inputImage,
+        name: this.inputName,
+        categories: this.inputCategories,
+        description: this.inputDescription,
+      };
+      this.$emit("ArrayOfInput", obj);
+      console.log("send:", obj);
       this.idNumber++;
-      console.log("send:", this.obj);
-      this.$emit("ArrayOfInput", this.obj);
-      delete this.obj[0];
-      console.log("deleted:", this.obj);
+      this.inputDate = "";
+      this.inputLocation = "";
+      this.inputImage = "";
+      this.inputName = "";
+      this.inputCategories = "";
+      this.inputDescription = "";
+    },
+    copyText() {
+      navigator.clipboard.writeText("https://placehold.co/400x400/red/white");
+      alert("Copied!!");
     },
   },
 };
