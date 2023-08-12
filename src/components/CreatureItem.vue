@@ -1,15 +1,16 @@
 <template>
   <div class="anItem">
-    <div class="detailCard">
+    <div v-if="show" class="detailCard">
       <ul>
         <li>
           <h2>detail</h2>
           <p>{{ card.description }}</p>
         </li>
-        <button>X close detail</button>
+        <button @click="switchShowHide">X close detail</button>
       </ul>
     </div>
-    <div class="children" :class="{ showing }">
+
+    <div>
       <ul>
         <li><img :src="card.image" :alt="name" /></li>
         <li data-test-id="1">
@@ -26,6 +27,7 @@
         </li>
       </ul>
     </div>
+    <button @click="switchShowHide">Show Detail</button>
   </div>
 </template>
 
@@ -51,8 +53,13 @@ export default {
   },
   data() {
     return {
-      showing: false,
+      show: false,
     };
+  },
+  methods: {
+    switchShowHide() {
+      this.show = !this.show;
+    },
   },
 };
 </script>

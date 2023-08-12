@@ -1,8 +1,8 @@
 <template>
   <CreatureCategories @chosenCategories="receiveCategories" />
-  <div class="parent">
+  <div>
     <p>current category: {{ currentCategory }}</p>
-    <div v-if="filteredCards != ''" class="cardContainer">
+    <div v-if="filteredCards != ''" class="cardContainer list">
       <CreatureItem
         v-for="card in filteredCards"
         :card="card"
@@ -66,5 +66,10 @@ export default {
   width: 100%;
   overflow: scroll;
   border: 2px solid black;
+}
+.list {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
 }
 </style>

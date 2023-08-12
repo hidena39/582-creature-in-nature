@@ -77,7 +77,7 @@ export default {
     },
     copyText() {
       navigator.clipboard.writeText(
-        "https://placehold.co/400x400/yellow/white"
+        "https://placehold.co/400x500/yellow/white"
       );
       alert("Copied!!");
     },
