@@ -1,7 +1,6 @@
 <template>
   <div>
     <form @submit.prevent="sendAllInput">
-      <!-- @submit.prevent=functionName -->
       <label for="date">Date</label>
       <input type="date" id="date" v-model="inputDate" required />
       <label for="location">Location</label>
@@ -77,7 +76,9 @@ export default {
       this.inputDescription = "";
     },
     copyText() {
-      navigator.clipboard.writeText("https://placehold.co/400x400/red/white");
+      navigator.clipboard.writeText(
+        "https://placehold.co/400x400/yellow/white"
+      );
       alert("Copied!!");
     },
   },
@@ -90,5 +91,6 @@ textarea,
 select {
   display: block;
   margin: 10px;
+  border: dotted 2px green;
 }
 </style>

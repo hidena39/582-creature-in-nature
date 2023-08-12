@@ -2,7 +2,7 @@
   <CreatureCategories @chosenCategories="receiveCategories" />
   <div class="parent">
     <p>current category: {{ currentCategory }}</p>
-    <div v-if="filteredCards != ''" class="container">
+    <div v-if="filteredCards != ''" class="cardContainer">
       <CreatureItem
         v-for="card in filteredCards"
         :card="card"
@@ -10,7 +10,7 @@
       ></CreatureItem>
     </div>
 
-    <div v-else class="container">
+    <div v-else class="cardContainer">
       <p>No cards to show you</p>
     </div>
   </div>
@@ -60,3 +60,11 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.cardContainer {
+  width: 100%;
+  overflow: scroll;
+  border: 2px solid black;
+}
+</style>

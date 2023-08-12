@@ -1,23 +1,31 @@
 <template>
-  <div class="children" :class="{ showing }">
-    <ul>
-      <li><img :src="card.image" :alt="name" /></li>
-      <li data-test-id="1">
-        <p>{{ card.date }}</p>
-      </li>
-      <li>
-        <p>{{ card.location }}</p>
-      </li>
-      <li>
-        <p>{{ card.name }}</p>
-      </li>
-      <li>
-        <p>{{ card.description }}</p>
-      </li>
-      <li>
-        <p>{{ card.categories }}</p>
-      </li>
-    </ul>
+  <div class="anItem">
+    <div class="detailCard">
+      <ul>
+        <li>
+          <h2>detail</h2>
+          <p>{{ card.description }}</p>
+        </li>
+        <button>X close detail</button>
+      </ul>
+    </div>
+    <div class="children" :class="{ showing }">
+      <ul>
+        <li><img :src="card.image" :alt="name" /></li>
+        <li data-test-id="1">
+          <p>{{ card.date }}</p>
+        </li>
+        <li>
+          <p>{{ card.location }}</p>
+        </li>
+        <li>
+          <p>{{ card.name }}</p>
+        </li>
+        <li>
+          <p>{{ card.categories }}</p>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -50,6 +58,25 @@ export default {
 </script>
 
 <style lang="scss">
+.anItem {
+  position: relative;
+  width: 320px;
+  border: black solid 1px;
+}
+img {
+  width: 100%;
+  height: 400px;
+}
+.detailCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1rem;
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  background-color: pink;
+  z-index: 2;
+}
 li {
   list-style: none;
 }

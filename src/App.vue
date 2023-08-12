@@ -1,11 +1,12 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-  <CreatureForm @ArrayOfInput="PushArray" />
-  <h1>Creature in Nature</h1>
-  <h2>Animals/Vertebrates</h2>
-  <!-- <CreatureForm></CreatureForm> -->
-  <CreatureList :cards="cards"></CreatureList>
+  <div class="largeContainer">
+    <h1>Creature in Nature</h1>
+    <h2>Animals/Vertebrates</h2>
+    <CreatureForm @ArrayOfInput="PushArray" />
+    <CreatureList :cards="cards"></CreatureList>
+  </div>
 </template>
 
 <script>
@@ -74,3 +75,19 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+.largeContainer {
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  overflow: scroll;
+  border: 2px solid black;
+}
+</style>
