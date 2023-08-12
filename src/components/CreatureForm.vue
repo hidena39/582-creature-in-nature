@@ -1,18 +1,50 @@
 <template>
   <div>
     <form @submit.prevent="sendAllInput">
-      <label for="date">Date</label>
-      <input type="date" id="date" v-model="inputDate" required />
+      <label data-test-id="9" for="date">Date</label>
+      <input
+        data-test-id="8"
+        type="date"
+        id="date"
+        v-model="inputDate"
+        required
+      />
       <label for="location">Location</label>
-      <input type="text" id="location" v-model="inputLocation" required />
-      <label for="location"
-        >Image URL <button @click="copyText">Copy example URL</button></label
+      <input
+        data-test-id="10"
+        type="text"
+        id="location"
+        v-model="inputLocation"
+        required
+      />
+      <label for="image"
+        >Image URL
+        <button data-test-id="15" @click="copyText">
+          Copy example URL
+        </button></label
       >
-      <input type="text" id="location" v-model="inputImage" required />
+      <input
+        data-test-id="11"
+        type="text"
+        id="image"
+        v-model="inputImage"
+        required
+      />
       <label for="name">Name</label>
-      <input type="text" id="name" v-model="inputName" required />
+      <input
+        data-test-id="12"
+        type="text"
+        id="name"
+        v-model="inputName"
+        required
+      />
       <label for="categories">categories</label>
-      <select id="categories" v-model="inputCategories" required>
+      <select
+        data-test-id="13"
+        id="categories"
+        v-model="inputCategories"
+        required
+      >
         <option value="mammals">mammals</option>
         <option value="birds">birds</option>
         <option value="amphibians">amphibians</option>
@@ -21,6 +53,7 @@
       </select>
       <label for="description">Description</label>
       <textarea
+        data-test-id="14"
         id="description"
         cols="30"
         rows="10"
@@ -79,7 +112,6 @@ export default {
       navigator.clipboard.writeText(
         "https://placehold.co/400x500/yellow/white"
       );
-      alert("Copied!!");
     },
   },
 };
