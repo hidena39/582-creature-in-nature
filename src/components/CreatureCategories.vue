@@ -1,7 +1,7 @@
 <template>
-  <label for="all"> all</label>
+  <label for="all" data-test-id="7"> all</label>
   <input
-    data-test-id="2"
+    data-test-id="6"
     type="radio"
     id="all"
     value="all"
@@ -11,7 +11,6 @@
   />
   <label for="mammals"> mammals</label>
   <input
-    data-test-id="2"
     type="radio"
     id="mammals"
     value="mammals"

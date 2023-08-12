@@ -6,9 +6,6 @@ describe("CourseItem.vue", () => {
     const card = {
       date: "2023-08-01",
       location: "Vanier Colledge",
-      image: "https://placehold.co/400x400/orange/white",
-      name: "Old World sparrows",
-      categories: "mammals",
     };
     const wrapper = shallowMount(CreatureItem, {
       props: { card },
@@ -20,6 +17,7 @@ describe("CourseItem.vue", () => {
   it("Show detail button is there", () => {
     const wrapper = shallowMount(CreatureItem);
     expect(wrapper.find("[data-test-id='4']").text()).toBe("Show Detail");
+    expect(wrapper.find("[data-test-id='4']").exists()).toBe(true);
   });
   it("Show detail button shows detail card", async () => {
     const wrapper = shallowMount(CreatureItem);
@@ -31,6 +29,7 @@ describe("CourseItem.vue", () => {
     const wrapper = shallowMount(CreatureItem);
     await wrapper.find("[data-test-id='4']").trigger("click");
     expect(wrapper.find("[data-test-id='6']").text()).toBe("X close detail");
+    expect(wrapper.find("[data-test-id='6']").exists()).toBe(true);
   });
   it("Close detail button hides detail card", async () => {
     const wrapper = shallowMount(CreatureItem);
