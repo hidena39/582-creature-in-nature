@@ -1,12 +1,12 @@
 <template>
   <div class="anItem">
-    <div v-if="show" class="detailCard">
+    <div data-test-id="5" v-if="show" class="detailCard">
       <ul>
         <li>
           <h2>detail</h2>
           <p>{{ card.description }}</p>
         </li>
-        <button @click="switchShowHide">X close detail</button>
+        <button data-test-id="6" @click="switchShowHide">X close detail</button>
       </ul>
     </div>
 
@@ -17,7 +17,7 @@
           <p>{{ card.date }}</p>
         </li>
         <li>
-          <p>{{ card.location }}</p>
+          <p data-test-id="3">{{ card.location }}</p>
         </li>
         <li>
           <p>{{ card.name }}</p>
@@ -27,7 +27,7 @@
         </li>
       </ul>
     </div>
-    <button @click="switchShowHide">Show Detail</button>
+    <button data-test-id="4" @click="switchShowHide">Show Detail</button>
   </div>
 </template>
 
