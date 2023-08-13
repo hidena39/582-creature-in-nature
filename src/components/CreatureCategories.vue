@@ -1,4 +1,5 @@
 <template>
+  <h3>What do you want to see?</h3>
   <label for="all" data-test-id="7"> all</label>
   <input
     data-test-id="6"
@@ -74,3 +75,9 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+h3 {
+  margin-bottom: 1rem;
+}
+</style>

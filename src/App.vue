@@ -2,8 +2,12 @@
   <!-- <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Welcome to Your Vue.js App" /> -->
   <div class="largeContainer">
-    <h1>Creature in Nature</h1>
-    <h2>Animals/Vertebrates</h2>
+    <div class="titleContainer">
+      <img src="./assets/img/bird-865x1280.png" alt="" />
+      <h1>Creature in Nature</h1>
+      <h2>Animals/Vertebrates</h2>
+    </div>
+
     <CreatureForm @ArrayOfInput="PushArray" />
     <CreatureList :cards="cards" @deleteCard="deleteCard"></CreatureList>
   </div>
@@ -95,17 +99,84 @@ export default {
 </script>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;400;500;600;900&family=Montserrat:wght@100;200;400;600;700;900&family=Preahvihear&display=swap");
 * {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
 }
+/*----------fonts----------*/
+html {
+  font-size: 16px;
+}
+h1,
+h2,
+h3 {
+  font-family: "Preahvihear", sans-serif;
+  color: rgb(63, 57, 51);
+  text-align: center;
+}
+h1 {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
+h2 {
+  font-size: 1rem;
+  color: rgb(136, 108, 76);
+}
+h3 {
+  font-size: 1.2rem;
+  color: rgb(83, 78, 72);
+}
+body,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: black;
+}
+/*----------button----------*/
+button {
+  padding: 0 1rem 0 1rem;
+  border-radius: 1rem;
+  border: rgb(136, 108, 76) 3px solid;
+  background-color: rgb(241, 230, 216);
+  font-weight: 600;
+  &:hover {
+    background-color: rgb(241, 209, 64);
+  }
+}
+/*----------background----------*/
+body {
+  background-image: url(assets/img/green-grass-1260x640.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
+
+<style scoped lang="scss">
+h1 {
+  margin-top: 1rem;
+}
+.titleContainer {
+  background-color: rgb(233, 235, 211);
+  padding: 1rem;
+  position: relative;
+}
+img {
+  position: absolute;
+  width: 8rem;
+  height: auto;
+  top: 0rem;
+  right: -1.5rem;
+}
 .largeContainer {
   width: 100vw;
   height: 100vh;
-  padding: 2rem;
+  padding: 1rem 2rem 1rem 2rem;
   overflow: scroll;
-  border: 2px solid black;
+  // border: 2px solid black;
 }
 </style>

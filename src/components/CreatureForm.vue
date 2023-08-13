@@ -1,72 +1,81 @@
 <template>
-  <div>
+  <div class="formpageContainner">
+    <h3>What did you find?</h3>
     <form @submit.prevent="sendAllInput">
-      <label data-test-id="9" for="date">Date</label>
-      <input
-        data-test-id="8"
-        type="date"
-        id="date"
-        v-model="inputDate"
-        required
-      />
-      <label for="location">Location</label>
-      <input
-        data-test-id="10"
-        type="text"
-        id="location"
-        v-model="inputLocation"
-        required
-      />
-      <label for="image"
-        >Image URL
-        <button data-test-id="15" @click="copyText">
-          Copy example URL
-        </button></label
-      >
-      <input
-        data-test-id="11"
-        type="text"
-        id="image"
-        v-model="inputImage"
-        required
-      />
-      <label for="name">Name</label>
-      <input
-        data-test-id="12"
-        type="text"
-        id="name"
-        v-model="inputName"
-        required
-      />
-      <label for="categories">categories</label>
-      <select
-        data-test-id="13"
-        id="categories"
-        v-model="inputCategories"
-        required
-      >
-        <option value="mammals">mammals</option>
-        <option value="birds">birds</option>
-        <option value="amphibians">amphibians</option>
-        <option value="reptiles">reptiles</option>
-        <option value="fishes">fishes</option>
-      </select>
-      <label for="description">Description</label>
-      <textarea
-        data-test-id="14"
-        id="description"
-        cols="30"
-        rows="10"
-        v-model="inputDescription"
-      ></textarea>
-      <input type="submit" value="Send Request" />
+      <div class="inputWrap">
+        <label data-test-id="9" for="date">Date</label>
+        <input
+          data-test-id="8"
+          type="date"
+          id="date"
+          v-model="inputDate"
+          required
+        />
+      </div>
+      <div class="inputWrap">
+        <label for="location">Location</label>
+        <input
+          data-test-id="10"
+          type="text"
+          id="location"
+          v-model="inputLocation"
+          required
+        />
+      </div>
+      <div class="inputWrap">
+        <label for="image">Image URL </label>
+        <input
+          data-test-id="11"
+          type="text"
+          id="image"
+          v-model="inputImage"
+          required
+        />
+        <button data-test-id="15" @click="copyText">Copy example URL</button>
+      </div>
+      <div class="inputWrap">
+        <label for="name">Name</label>
+        <input
+          data-test-id="12"
+          type="text"
+          id="name"
+          v-model="inputName"
+          required
+        />
+      </div>
+      <div class="inputWrap">
+        <label for="categories">categories</label>
+        <select
+          data-test-id="13"
+          id="categories"
+          v-model="inputCategories"
+          required
+        >
+          <option value="mammals">mammals</option>
+          <option value="birds">birds</option>
+          <option value="amphibians">amphibians</option>
+          <option value="reptiles">reptiles</option>
+          <option value="fishes">fishes</option>
+        </select>
+      </div>
+      <div class="inputWrap">
+        <label for="description">Description</label>
+        <textarea
+          data-test-id="14"
+          id="description"
+          cols="30"
+          rows="10"
+          v-model="inputDescription"
+        ></textarea>
+      </div>
+      <input id="submit" type="submit" value="Add Creature!" />
     </form>
-    {{ inputDate }}
+    <!-- {{ inputDate }}
     {{ inputLocation }}
     {{ inputImage }}
     {{ inputName }}
     {{ inputCategories }}
-    {{ inputDescription }}
+    {{ inputDescription }} -->
   </div>
 </template>
 
@@ -117,12 +126,45 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
+.formpageContainner {
+  margin: 1rem 0 1rem 0;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+label {
+  font-weight: 700;
+}
 input,
 textarea,
 select {
+  line-height: 1rem;
   display: block;
-  margin: 10px;
   border: dotted 2px green;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.5rem;
+  width: 11rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.1rem 1rem 0.1rem 1rem;
+}
+#image {
+  width: 15rem;
+}
+#submit {
+  padding: 0.1rem 1rem 0.1rem 1rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  background-color: rgb(136, 108, 76);
+  border: white 2px solid;
+  color: white;
+  height: 1.8rem;
+  &:hover {
+    background-color: rgb(236, 132, 13);
+  }
 }
 </style>
