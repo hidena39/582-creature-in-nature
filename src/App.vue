@@ -3,7 +3,11 @@
   <HelloWorld msg="Welcome to Your Vue.js App" /> -->
   <div class="largeContainer">
     <div class="titleContainer">
-      <img src="./assets/img/bird-865x1280.png" alt="" />
+      <img
+        id="bird"
+        src="./assets/img/bird-865x1280.png"
+        alt="Illustration of a bird"
+      />
       <h1>Creature in Nature</h1>
       <h2>Animals/Vertebrates</h2>
     </div>
@@ -27,7 +31,7 @@ export default {
           id: 1,
           date: "2023-08-01",
           location: "Vanier Colledge",
-          image: "https://placehold.co/400x500/orange/white",
+          image: "https://placehold.co/300x375/884c65/white",
           name: "Old World sparrows",
           description:
             "Old World sparrows are a group of small passerine birds forming the family Passeridae. They are also known as true sparrows, a name also used for a particular genus of the family, Passer.[1] They are distinct from both the New World sparrows, in the family Passerellidae, and from a few other birds sharing their name, such as the Java sparrow of the family Estrildidae. ",
@@ -37,7 +41,7 @@ export default {
           id: 2,
           date: "2023-08-01",
           location: "Vanier Colledge",
-          image: "https://placehold.co/400x500/orange/white",
+          image: "https://placehold.co/300x375/594c88/white",
           name: "Old World sparrows",
           description:
             "Old World sparrows are a group of small passerine birds forming the family Passeridae. They are also known as true sparrows, a name also used for a particular genus of the family, Passer.[1] They are distinct from both the New World sparrows, in the family Passerellidae, and from a few other birds sharing their name, such as the Java sparrow of the family Estrildidae. ",
@@ -47,7 +51,7 @@ export default {
           id: 3,
           date: "2023-08-01",
           location: "Vanier Colledge",
-          image: "https://placehold.co/400x500/green/white",
+          image: "https://placehold.co/300x375/4c7288/white",
           name: "Old World sparrows",
           description:
             "Old World sparrows are a group of small passerine birds forming the family Passeridae. They are also known as true sparrows, a name also used for a particular genus of the family, Passer.[1] They are distinct from both the New World sparrows, in the family Passerellidae, and from a few other birds sharing their name, such as the Java sparrow of the family Estrildidae. ",
@@ -57,7 +61,7 @@ export default {
           id: 4,
           date: "2023-08-01",
           location: "Vanier Colledge",
-          image: "https://placehold.co/400x500/blue/white",
+          image: "https://placehold.co/300x375/4c8856/white",
           name: "Old World sparrows",
           description:
             "Old World sparrows are a group of small passerine birds forming the family Passeridae. They are also known as true sparrows, a name also used for a particular genus of the family, Passer.[1] They are distinct from both the New World sparrows, in the family Passerellidae, and from a few other birds sharing their name, such as the Java sparrow of the family Estrildidae. ",
@@ -67,7 +71,7 @@ export default {
           id: 5,
           date: "2023-08-01",
           location: "Vanier Colledge",
-          image: "https://placehold.co/400x500/red/white",
+          image: "https://placehold.co/300x375/7b884c/white",
           name: "Old World sparrows",
           description:
             "Old World sparrows are a group of small passerine birds forming the family Passeridae. They are also known as true sparrows, a name also used for a particular genus of the family, Passer.[1] They are distinct from both the New World sparrows, in the family Passerellidae, and from a few other birds sharing their name, such as the Java sparrow of the family Estrildidae. ",
@@ -128,6 +132,7 @@ h2 {
 h3 {
   font-size: 1.2rem;
   color: rgb(83, 78, 72);
+  text-decoration: underline;
 }
 body,
 button {
@@ -135,6 +140,9 @@ button {
   font-size: 1rem;
   line-height: 1.2rem;
   color: black;
+}
+label {
+  font-weight: 700;
 }
 /*----------button----------*/
 button {
@@ -165,7 +173,7 @@ h1 {
   padding: 1rem;
   position: relative;
 }
-img {
+img#bird {
   position: absolute;
   width: 8rem;
   height: auto;
@@ -177,6 +185,6 @@ img {
   height: 100vh;
   padding: 1rem 2rem 1rem 2rem;
   overflow: scroll;
-  // border: 2px solid black;
+  border: 2px solid blue;
 }
 </style>

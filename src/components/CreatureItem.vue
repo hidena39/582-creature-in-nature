@@ -14,21 +14,25 @@
       <ul>
         <li><img :src="card.image" :alt="name" /></li>
         <li data-test-id="1">
-          <p>{{ card.date }}</p>
+          <p><span>Date: </span>{{ card.date }}</p>
         </li>
         <li>
-          <p data-test-id="3">{{ card.location }}</p>
+          <p data-test-id="3"><span>At: </span>{{ card.location }}</p>
         </li>
         <li>
-          <p>{{ card.name }}</p>
+          <p><span>Name: </span>{{ card.name }}</p>
         </li>
         <li>
-          <p>{{ card.categories }}</p>
+          <p><span>Category: </span>{{ card.categories }}</p>
         </li>
       </ul>
     </div>
-    <button data-test-id="4" @click="switchShowHide">Show Detail</button>
-    <button @click="deleteCard" data-test-id="18">Delete Card</button>
+    <div class="buttonContainer">
+      <button data-test-id="4" @click="switchShowHide">Show Detail</button>
+      <button id="deleteButton" @click="deleteCard" data-test-id="18">
+        Delete Card
+      </button>
+    </div>
   </div>
 </template>
 
@@ -43,7 +47,7 @@ export default {
           id: "2",
           date: "2023-08-01",
           location: "Vanier Colledge",
-          image: "https://placehold.co/400x400/orange/white",
+          image: "https://placehold.co/300x375/88674c/white",
           name: "Old World sparrows",
           description:
             "Old World sparrows are a group of small passerine birds forming the family Passeridae. They are also known as true sparrows, a name also used for a particular genus of the family, Passer.[1] They are distinct from both the New World sparrows, in the family Passerellidae, and from a few other birds sharing their name, such as the Java sparrow of the family Estrildidae. ",
@@ -72,12 +76,20 @@ export default {
 <style lang="scss">
 .anItem {
   position: relative;
-  width: 320px;
-  border: black solid 1px;
+  width: 300px;
+  border: green dotted 3px;
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: white;
+  line-height: 1.5rem;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
 }
 img {
-  width: 100%;
-  height: 400px;
+  width: 300px;
+  height: 375px;
 }
 .detailCard {
   position: absolute;
@@ -86,10 +98,38 @@ img {
   margin: 1rem;
   width: calc(100% - 2rem);
   height: calc(100% - 2rem);
-  background-color: pink;
+  background-color: rgb(173, 187, 194);
+  border-radius: 2rem;
   z-index: 2;
 }
 li {
   list-style: none;
+}
+h2 {
+  margin: 2rem;
+}
+span {
+  font-weight: 600;
+}
+p,
+button {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#deleteButton {
+  font-size: 0.7rem;
+  padding: 0;
+  width: 5rem;
+  height: 2rem;
+  background-color: red;
+  color: white;
+  border: none;
+  &:hover {
+    background-color: black;
+  }
 }
 </style>

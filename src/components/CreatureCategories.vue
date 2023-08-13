@@ -1,62 +1,75 @@
 <template>
-  <h3>What do you want to see?</h3>
-  <label for="all" data-test-id="7"> all</label>
-  <input
-    data-test-id="6"
-    type="radio"
-    id="all"
-    value="all"
-    name="pickCategory"
-    v-model="chosen"
-    @change="sendChosen"
-  />
-  <label for="mammals"> mammals</label>
-  <input
-    type="radio"
-    id="mammals"
-    value="mammals"
-    name="pickCategory"
-    v-model="chosen"
-    @change="sendChosen"
-  />
-  <label for="birds"> birds</label>
-  <input
-    type="radio"
-    id="birds"
-    value="birds"
-    name="pickCategory"
-    v-model="chosen"
-    @change="sendChosen"
-  />
-  <label for="amphibians"> amphibians</label>
-  <input
-    type="radio"
-    id="amphibians"
-    value="amphibians"
-    name="pickCategory"
-    v-model="chosen"
-    @change="sendChosen"
-  />
-  <label for="reptiles"> reptiles</label>
-  <input
-    type="radio"
-    id="reptiles"
-    value="reptiles"
-    name="pickCategory"
-    v-model="chosen"
-    @change="sendChosen"
-  />
-  <label for="fishes"> fishes</label>
-  <input
-    type="radio"
-    id="fishes"
-    value="fishes"
-    name="pickCategory"
-    v-model="chosen"
-    @change="sendChosen"
-  />
+  <div class="inputContainer">
+    <div class="eachInput">
+      <input
+        data-test-id="6"
+        type="radio"
+        id="all"
+        value="all"
+        name="pickCategory"
+        v-model="chosen"
+        @change="sendChosen"
+      />
+      <label for="all" data-test-id="7"> all</label>
+    </div>
+    <div class="eachInput">
+      <input
+        type="radio"
+        id="mammals"
+        value="mammals"
+        name="pickCategory"
+        v-model="chosen"
+        @change="sendChosen"
+      />
+      <label for="mammals"> mammals</label>
+    </div>
+    <div class="eachInput">
+      <input
+        type="radio"
+        id="birds"
+        value="birds"
+        name="pickCategory"
+        v-model="chosen"
+        @change="sendChosen"
+      />
+      <label for="birds"> birds</label>
+    </div>
+    <div class="eachInput">
+      <input
+        type="radio"
+        id="amphibians"
+        value="amphibians"
+        name="pickCategory"
+        v-model="chosen"
+        @change="sendChosen"
+      />
+      <label for="amphibians"> amphibians</label>
+    </div>
+    <div class="eachInput">
+      <input
+        type="radio"
+        id="reptiles"
+        value="reptiles"
+        name="pickCategory"
+        v-model="chosen"
+        @change="sendChosen"
+      />
+      <label for="reptiles"> reptiles</label>
+    </div>
+    <div class="eachInput">
+      <input
+        type="radio"
+        id="fishes"
+        value="fishes"
+        name="pickCategory"
+        v-model="chosen"
+        @change="sendChosen"
+      />
+      <label for="fishes"> fishes</label>
+    </div>
+  </div>
 
-  <p>You picked: {{ chosen }}</p>
+  <!-- <p>You picked: {{ chosen }}</p> -->
 </template>
 
 <script>
@@ -79,5 +92,14 @@ export default {
 <style scoped lang="scss">
 h3 {
   margin-bottom: 1rem;
+}
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.eachInput {
+  width: 130px;
 }
 </style>

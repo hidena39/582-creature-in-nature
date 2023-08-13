@@ -1,6 +1,6 @@
 <template>
   <div class="formpageContainner">
-    <h3>What did you find?</h3>
+    <h3>New Creature Found</h3>
     <form @submit.prevent="sendAllInput">
       <div class="inputWrap">
         <label data-test-id="9" for="date">Date</label>
@@ -119,7 +119,7 @@ export default {
     },
     copyText() {
       navigator.clipboard.writeText(
-        "https://placehold.co/400x500/yellow/white"
+        "https://placehold.co/300x375/88674c/white"
       );
     },
   },
@@ -135,9 +135,6 @@ form {
   flex-wrap: wrap;
   padding: 0.5rem;
   gap: 0.5rem;
-}
-label {
-  font-weight: 700;
 }
 input,
 textarea,

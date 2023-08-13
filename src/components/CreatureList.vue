@@ -1,7 +1,10 @@
 <template>
+  <h3>Creatures Found</h3>
   <CreatureCategories @chosenCategories="receiveCategories" />
-  <div>
-    <p data-test-id="16">current category: {{ currentCategory }}</p>
+  <div class="listContainer">
+    <p id="currentCategory" data-test-id="16">
+      You picked: {{ currentCategory }}
+    </p>
     <div v-if="filteredCards != ''" class="cardContainer list">
       <CreatureItem
         v-for="card in filteredCards"
@@ -70,14 +73,24 @@ export default {
 </script>
 
 <style lang="scss">
+h3 {
+  margin-bottom: 1rem;
+}
+#currentCategory {
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 .cardContainer {
   width: 100%;
-  overflow: scroll;
-  border: 2px solid black;
+  border: 2px solid red;
 }
 .list {
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 </style>
