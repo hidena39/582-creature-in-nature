@@ -28,7 +28,7 @@
       </ul>
     </div>
     <button data-test-id="4" @click="switchShowHide">Show Detail</button>
-    <button @click="deleteCard">Delete Card</button>
+    <button @click="deleteCard" data-test-id="18">Delete Card</button>
   </div>
 </template>
 

@@ -60,4 +60,12 @@ describe("CourseList.vue", () => {
       .vm.$emit("chosenCategories", "fishes");
     expect(wrapper.find("[data-test-id='17']").exists()).toBe(true);
   });
+  it("emits delete card event", async () => {
+    const card = { id: 3 };
+    const wrapper = shallowMount(CreatureList, {
+      props: { card },
+    });
+    await wrapper.vm.$emit("deleteCard", 3);
+    expect(wrapper.emitted().deleteCard[0][0]).toBe(3);
+  });
 });
