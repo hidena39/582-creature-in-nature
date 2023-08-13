@@ -7,6 +7,7 @@
         v-for="card in filteredCards"
         :card="card"
         :key="card.id"
+        @deleteCard="deleteCard"
       ></CreatureItem>
     </div>
 
@@ -46,16 +47,23 @@ export default {
       this.currentCategory = chosen;
       console.log("Filtered Cards:", this.filteredCards);
     },
+    deleteCard(id) {
+      console.log("send no.2:", id);
+      this.$emit("deleteCard", id);
+    },
   },
   computed: {
     filteredCards() {
-      if (this.currentCategory === "all") {
-        return this.cards;
-      } else {
-        return this.cards.filter(
-          (card) => card.categories === this.currentCategory
-        );
+      const filtered = [];
+      for (const card of this.cards) {
+        if (
+          this.currentCategory === "all" ||
+          card.categories === this.currentCategory
+        ) {
+          filtered.push(card);
+        }
       }
+      return filtered;
     },
   },
 };

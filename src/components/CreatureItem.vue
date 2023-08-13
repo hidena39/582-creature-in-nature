@@ -28,6 +28,7 @@
       </ul>
     </div>
     <button data-test-id="4" @click="switchShowHide">Show Detail</button>
+    <button @click="deleteCard">Delete Card</button>
   </div>
 </template>
 
@@ -59,6 +60,10 @@ export default {
   methods: {
     switchShowHide() {
       this.show = !this.show;
+    },
+    deleteCard() {
+      console.log("send :", this.card.id);
+      this.$emit("deleteCard", this.card.id);
     },
   },
 };
