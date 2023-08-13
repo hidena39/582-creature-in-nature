@@ -3,7 +3,7 @@
   <CreatureCategories @chosenCategories="receiveCategories" />
   <div class="listContainer">
     <p id="currentCategory" data-test-id="16">
-      You picked: {{ currentCategory }}
+      Category showing: {{ currentCategory }}
     </p>
     <div v-if="filteredCards != ''" class="cardContainer list">
       <CreatureItem
@@ -76,15 +76,15 @@ export default {
 h3 {
   margin-bottom: 1rem;
 }
+
 #currentCategory {
   text-align: center;
   margin: 1rem 0 2rem 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 .cardContainer {
   width: 100%;
-  border: 2px solid red;
 }
 .list {
   display: flex;
@@ -92,5 +92,16 @@ h3 {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+@media screen and (min-width: 600px) {
+}
+@media screen and (min-width: 730px) {
+  .list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
 }
 </style>

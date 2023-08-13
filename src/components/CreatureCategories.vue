@@ -1,5 +1,5 @@
 <template>
-  <div class="inputContainer">
+  <div class="categoryContainer">
     <div class="eachInput">
       <input
         data-test-id="6"
@@ -93,11 +93,13 @@ export default {
 h3 {
   margin-bottom: 1rem;
 }
-.inputContainer {
+.categoryContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .eachInput {
   width: 130px;

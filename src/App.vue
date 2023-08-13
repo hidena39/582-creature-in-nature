@@ -144,6 +144,17 @@ button {
 label {
   font-weight: 700;
 }
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 900px) {
+  html {
+    font-size: 18px;
+  }
+}
+
 /*----------button----------*/
 button {
   padding: 0 1rem 0 1rem;
@@ -185,6 +196,5 @@ img#bird {
   height: 100vh;
   padding: 1rem 2rem 1rem 2rem;
   overflow: scroll;
-  border: 2px solid blue;
 }
 </style>

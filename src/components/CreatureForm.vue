@@ -68,7 +68,9 @@
           v-model="inputDescription"
         ></textarea>
       </div>
-      <input id="submit" type="submit" value="Add Creature!" />
+      <div id="submitButton">
+        <input id="submit" type="submit" value="Add Creature!" />
+      </div>
     </form>
     <!-- {{ inputDate }}
     {{ inputLocation }}
@@ -128,7 +130,8 @@ export default {
 
 <style scoped lang="scss">
 .formpageContainner {
-  margin: 1rem 0 1rem 0;
+  margin: 1rem auto;
+  max-width: 900px;
 }
 form {
   display: flex;
@@ -149,7 +152,13 @@ select {
   border-radius: 0.5rem;
   padding: 0.1rem 1rem 0.1rem 1rem;
 }
-#image {
+div#submitButton {
+  width: 100%;
+}
+#location,
+#name,
+#image,
+#description {
   width: 15rem;
 }
 #submit {
@@ -162,6 +171,15 @@ select {
   height: 1.8rem;
   &:hover {
     background-color: rgb(236, 132, 13);
+  }
+}
+button {
+  margin: 0 0 0.5rem 0;
+}
+@media screen and (min-width: 580px) {
+  div#submitButton {
+    display: flex;
+    justify-content: center;
   }
 }
 </style>

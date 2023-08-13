@@ -99,8 +99,8 @@ img {
   width: calc(100% - 2rem);
   height: calc(100% - 2rem);
   background-color: rgb(173, 187, 194);
-  border-radius: 2rem;
   z-index: 2;
+  overflow-y: scroll;
 }
 li {
   list-style: none;
