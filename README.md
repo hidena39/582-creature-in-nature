@@ -49,11 +49,11 @@ See my tests inside `test/unit`.
 
 1. Input the details of the creature you found in nature and click the "Add Creature" button
 
-   - For the image, currently, you can only update via image URL. For testing, you can use "Copy example URL" button.
+   - For the image, currently, you can only update using image URL. For testing the "Add Creature" function, you can use "Copy example URL" button.
 
 2. Chose the category of the creature by clicking the radio buttons.
-3. Click the "Show/Hide Detail Card" button to show or hide the detail card.
-4. Click the "Delete Card" button to delete the card.
+3. Click the show/close button to show or hide the detail.
+4. Click the "Delete Card" button to delete the creature.
 
 ## License
 
