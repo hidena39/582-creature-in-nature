@@ -43,6 +43,8 @@ There are
 
 1. Run unit tests with `npm run test:unit`
 
+See my tests inside `test/unit`.
+
 ## How to use this app
 
 1. Input the details of the creature you found in nature and click the "Add Creature" button
