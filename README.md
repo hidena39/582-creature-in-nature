@@ -16,11 +16,11 @@ This is an app for kids to build a science project. Kids can upload details of c
 
 There are
 
-- Userinputs for newly found creature
+- User inputs for newly found creature
 - Copy to clipboard button
 - Radio buttons to sort the creatures by their category
-- Show/hide detail card button
-- Delete card button
+- Show/hide creature detail button
+- Delete creature button
 
 ## To do list
 
@@ -49,7 +49,7 @@ See my tests inside `test/unit`.
 
 1. Input the details of the creature you found in nature and click the "Add Creature" button
 
-- For the image, currently, you can only update via image URL. For testing, you can use "Copy example URL" button.
+   - For the image, currently, you can only update via image URL. For testing, you can use "Copy example URL" button.
 
 2. Chose the category of the creature by clicking the radio buttons.
 3. Click the "Show/Hide Detail Card" button to show or hide the detail card.
