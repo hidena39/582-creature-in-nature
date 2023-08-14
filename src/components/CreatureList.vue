@@ -106,6 +106,4 @@ h3 {
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 1200px) {
-}
 </style>

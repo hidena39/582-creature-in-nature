@@ -95,13 +95,15 @@ h3 {
 }
 .categoryContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 900px;
+  max-width: 400px;
   margin: 0 auto;
+  gap: 0.5rem;
 }
 .eachInput {
   width: 130px;
+  border: black dolid 1px;
 }
 </style>
