@@ -53,7 +53,7 @@ See my tests inside `test/unit`.
 
 2. Chose the category of the creature by clicking the radio buttons.
 3. Click the show/close button to show or hide the detail.
-4. Click the "Delete Card" button to delete the creature.
+4. Click the delete button to delete the creature.
 
 ## License
 
