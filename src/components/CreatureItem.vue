@@ -9,7 +9,6 @@
         <button data-test-id="6" @click="switchShowHide">X close detail</button>
       </ul>
     </div>
-
     <div>
       <ul>
         <li><img :src="card.image" :alt="name" /></li>

@@ -16,7 +16,7 @@ describe("CourseList.vue", () => {
       .findComponent(CreatureCategories)
       .vm.$emit("chosenCategories", "mammals");
     expect(wrapper.find("[data-test-id='16']").text()).toBe(
-      "current category: mammals"
+      "Category showing: mammals"
     );
   });
   it("shows only selected cards using filteredCards function", async () => {

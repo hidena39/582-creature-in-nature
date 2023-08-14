@@ -10,8 +10,10 @@ describe("CourseItem.vue", () => {
     const wrapper = shallowMount(CreatureItem, {
       props: { card },
     });
-    expect(wrapper.find("[data-test-id='1']").text()).toBe("2023-08-01");
-    expect(wrapper.find("[data-test-id='3']").text()).toBe("Vanier Colledge");
+    expect(wrapper.find("[data-test-id='1']").text()).toBe("Date: 2023-08-01");
+    expect(wrapper.find("[data-test-id='3']").text()).toBe(
+      "At: Vanier Colledge"
+    );
   });
   //show detail button
   it("Show detail button is there", () => {

@@ -101,9 +101,9 @@ h3 {
   max-width: 400px;
   margin: 0 auto;
   gap: 0.5rem;
-}
-.eachInput {
-  width: 130px;
-  border: black dolid 1px;
+  .eachInput {
+    width: 130px;
+    border: black dolid 1px;
+  }
 }
 </style>

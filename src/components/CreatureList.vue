@@ -14,8 +14,8 @@
       ></CreatureItem>
     </div>
 
-    <div v-else class="cardContainer">
-      <p data-test-id="17">No cards to show you</p>
+    <div v-else class="cardContainer" id="noCardMessageContainer">
+      <h1 data-test-id="17">No creature to show you!!</h1>
     </div>
   </div>
 </template>
@@ -76,7 +76,6 @@ export default {
 h3 {
   margin-bottom: 1rem;
 }
-
 #currentCategory {
   text-align: center;
   margin: 1rem 0 2rem 0;
@@ -95,9 +94,11 @@ h3 {
   gap: 2rem;
 }
 .listContainer {
-  margin-top: 1rem;
+  margin: 4rem 0 4rem 0;
 }
-
+#noCardMessageContainer {
+  margin-top: 2rem;
+}
 @media screen and (min-width: 730px) {
   .list {
     flex-direction: row;
