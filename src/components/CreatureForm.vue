@@ -24,6 +24,7 @@
       </div>
       <div class="inputWrap">
         <label for="image">Image URL </label>
+        <button data-test-id="15" @click="copyText">Copy example URL</button>
         <input
           data-test-id="11"
           type="text"
@@ -31,7 +32,6 @@
           v-model="inputImage"
           required
         />
-        <button data-test-id="15" @click="copyText">Copy example URL</button>
       </div>
       <div class="inputWrap">
         <label for="name">Name</label>
@@ -68,9 +68,8 @@
           v-model="inputDescription"
         ></textarea>
       </div>
-      <div id="submitButton">
-        <input id="submit" type="submit" value="Add Creature!" />
-      </div>
+
+      <input id="submit" type="submit" value="Add Creature!" />
     </form>
     <!-- {{ inputDate }}
     {{ inputLocation }}
@@ -121,7 +120,7 @@ export default {
     },
     copyText() {
       navigator.clipboard.writeText(
-        "https://placehold.co/300x375/88674c/white"
+        "https://placehold.co/300x375/c9b8a9/white"
       );
     },
   },
@@ -135,6 +134,7 @@ export default {
 }
 form {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 0.5rem;
   gap: 0.5rem;
@@ -144,42 +144,39 @@ textarea,
 select {
   line-height: 1rem;
   display: block;
-  border: dotted 2px green;
+  border: solid 2px green;
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 0.5rem;
-  width: 11rem;
+  margin-bottom: 0.3rem;
+  width: 300px;
+  height: 2.5rem;
   font-size: 1rem;
   border-radius: 0.5rem;
   padding: 0.1rem 1rem 0.1rem 1rem;
 }
-div#submitButton {
-  width: 100%;
+textarea {
+  height: 5rem;
 }
-#location,
-#name,
-#image,
-#description {
-  width: 15rem;
-}
+
 #submit {
   padding: 0.1rem 1rem 0.1rem 1rem;
   font-weight: 600;
-  border-radius: 1rem;
-  background-color: rgb(136, 108, 76);
+  background-color: green;
   border: white 2px solid;
   color: white;
   height: 1.8rem;
   &:hover {
-    background-color: rgb(236, 132, 13);
+    background-color: rgb(97, 73, 47);
   }
 }
 button {
-  margin: 0 0 0.5rem 0;
-}
-@media screen and (min-width: 580px) {
-  div#submitButton {
-    display: flex;
-    justify-content: center;
+  margin: 0 0 0.3rem 0;
+  background: white;
+  font-size: 0.8rem;
+  border-radius: 0;
+  border: 1px solid black;
+  background: rgb(218, 218, 206);
+  &:hover {
+    background: rgb(126, 121, 116);
   }
 }
 </style>

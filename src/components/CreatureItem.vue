@@ -28,7 +28,9 @@
       </ul>
     </div>
     <div class="buttonContainer">
-      <button data-test-id="4" @click="switchShowHide">Show Detail</button>
+      <button id="detailButton" data-test-id="4" @click="switchShowHide">
+        Show Detail
+      </button>
       <button id="deleteButton" @click="deleteCard" data-test-id="18">
         Delete Card
       </button>
@@ -47,7 +49,7 @@ export default {
           id: "2",
           date: "2023-08-01",
           location: "Vanier Colledge",
-          image: "https://placehold.co/300x375/88674c/white",
+          image: "https://placehold.co/300x375/c9b8a9/white",
           name: "Old World sparrows",
           description:
             "Old World sparrows are a group of small passerine birds forming the family Passeridae. They are also known as true sparrows, a name also used for a particular genus of the family, Passer.[1] They are distinct from both the New World sparrows, in the family Passerellidae, and from a few other birds sharing their name, such as the Java sparrow of the family Estrildidae. ",
@@ -77,7 +79,6 @@ export default {
 .anItem {
   position: relative;
   width: 300px;
-  border: green dotted 3px;
   border-radius: 2rem;
   overflow: hidden;
   background-color: white;
@@ -86,6 +87,7 @@ export default {
 .buttonContainer {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 img {
   width: 300px;
@@ -116,18 +118,28 @@ button {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-button {
+#detailButton {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  background-color: green;
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  &:hover {
+    background-color: rgb(97, 73, 47);
+  }
 }
 #deleteButton {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   font-size: 0.7rem;
   padding: 0;
   width: 5rem;
-  height: 2rem;
-  background-color: red;
+  height: 1.2rem;
+  background-color: rgb(194, 86, 86);
   color: white;
   border: none;
+  border-radius: 0.3rem;
   &:hover {
     background-color: black;
   }

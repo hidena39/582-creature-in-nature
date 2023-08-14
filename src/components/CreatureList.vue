@@ -82,6 +82,7 @@ h3 {
   margin: 1rem 0 2rem 0;
   font-size: 1.2rem;
   font-weight: bold;
+  display: none;
 }
 .cardContainer {
   width: 100%;
@@ -93,13 +94,16 @@ h3 {
   align-items: center;
   gap: 2rem;
 }
-@media screen and (min-width: 600px) {
+.listContainer {
+  margin-top: 1rem;
 }
+
 @media screen and (min-width: 730px) {
   .list {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 1200px) {
