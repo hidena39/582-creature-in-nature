@@ -41,10 +41,16 @@ describe("CourseItem.vue", () => {
     expect(wrapper.find("[data-test-id='5']").exists()).toBe(false);
   });
   //delete button
-  it("delete button is there when detail card is not showing", () => {
+  it("delete button is there", () => {
     const wrapper = shallowMount(CreatureItem);
     expect(wrapper.find("[data-test-id='18']").text()).toBe("Delete Card");
     expect(wrapper.find("[data-test-id='18']").exists()).toBe(true);
+  });
+  it("delete button emits deleteCard event when clicked", async () => {
+    const wrapper = shallowMount(CreatureItem);
+    await wrapper.find("#deleteButton").trigger("click");
+    expect(wrapper.emitted().deleteCard).toBeTruthy;
+    expect(wrapper.emitted().deleteCard[0][0]).toBe(2);
   });
   it("delete detail button delete card (this.card.id stops existing)", async () => {
     const wrapper = shallowMount(CreatureItem);

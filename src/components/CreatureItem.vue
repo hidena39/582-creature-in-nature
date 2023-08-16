@@ -45,7 +45,7 @@ export default {
       type: Object,
       default() {
         return {
-          id: "2",
+          id: 2,
           date: "2023-08-01",
           location: "Vanier Colledge",
           image: "https://placehold.co/300x375/c9b8a9/white",
